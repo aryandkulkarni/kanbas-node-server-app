@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <a href="#" id="getModule">Get Module</a>
+  <a href="#" id="getModuleName">Get Module Name</a>
+  <script>
+    document.getElementById('getModule').addEventListener('click', function() {
+      fetch('/lab5/module')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    });
+
+    document.getElementById('getModuleName').addEventListener('click', function() {
+      fetch('/lab5/module/name')
+        .then(response => response.json())
+        .then(data => console.log(data));
+    });
+  </script>
+</body>
+</html>
